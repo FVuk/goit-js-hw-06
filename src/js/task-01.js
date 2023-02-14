@@ -1,7 +1,10 @@
-const liItems = document.querySelectorAll(".list-item");
+const liItems = document.querySelectorAll(".item");
 console.log("Number of categories: " + liItems.length);
 
-function sum(a, b) {
-  return a + b;
-}
-console.log(sum(1, 2));
+liItems.forEach((liItem) => {
+  const header = liItem.querySelector("h2");
+  const headerText = header.textContent;
+  console.log("Category: " + headerText);
+  const element = liItem.querySelectorAll("li");
+  console.log("Elements: " + element.length);
+});
